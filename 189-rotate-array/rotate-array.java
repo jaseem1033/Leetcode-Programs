@@ -3,11 +3,8 @@ class Solution {
         int n=nums.length;
         int arr[]=new int[n];
         for(int i=0;i<n;i++)
-        {
-            int a=(i+k)%n;
-            arr[a]=nums[i];
-        }
+            arr[(i+k) % n]=nums[i];
         for(int i=0;i<n;i++)
-        nums[i]=arr[i];
+            nums[i]=arr[i];
     }
 }
