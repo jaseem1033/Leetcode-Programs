@@ -1,6 +1,5 @@
 class Solution {
     public int getCommon(int[] nums1, int[] nums2) {
-        Arrays.sort(nums1);
         HashSet<Integer>hs1=new HashSet<>();
         HashSet<Integer>hs2=new HashSet<>();
 
