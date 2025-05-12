@@ -7,8 +7,7 @@ class Solution {
         {
             while(!s.isEmpty() && s.peek() <= nums2[i])
                 s.pop();
-            int a = s.isEmpty() ? -1 : s.peek();
-            map.put(nums2[i],a);
+            map.put(nums2[i],s.isEmpty() ? -1 : s.peek());
             s.push(nums2[i]);
         }
         for(int i=0;i<nums1.length;i++)
