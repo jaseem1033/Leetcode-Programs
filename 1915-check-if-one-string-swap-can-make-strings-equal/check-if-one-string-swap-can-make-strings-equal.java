@@ -18,7 +18,9 @@ class Solution {
         if(count == 0) return true;
         if(count != 2) return false;
 
-        return (s1.charAt(diff1) == s2.charAt(diff2) && s2.charAt(diff1) 
-        == s1.charAt(diff2));
+        if(s1.charAt(diff1) == s2.charAt(diff2) && s2.charAt(diff1) 
+        == s1.charAt(diff2))
+        return true;
+        else return false;
     }
 }
