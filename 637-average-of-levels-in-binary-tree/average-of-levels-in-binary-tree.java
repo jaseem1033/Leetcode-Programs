@@ -21,7 +21,7 @@ class Solution {
         q.add(root);
         while(!q.isEmpty())
         {
-            Double x = 0.0;
+            double x = 0.0;
             int n = q.size();
             for(int i = 0;i < n; i++)
             {
