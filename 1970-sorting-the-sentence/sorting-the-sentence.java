@@ -4,7 +4,7 @@ class Solution {
         String splitArr[] = s.split(" ");
         for(String str : splitArr)
         {
-            int idx = Integer.valueOf(str.substring(str.length()-1,str.length()));
+            int idx = str.charAt(str.length()-1) - '0';
             arr[idx] = str.substring(0,str.length()-1);
         }
         StringBuilder sb = new StringBuilder();
