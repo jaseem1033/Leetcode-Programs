@@ -23,16 +23,14 @@ class Solution {
         {
             Double x = 0.0;
             int n = q.size();
-            int l = q.size();
-            while(n > 0)
+            for(int i = 0;i < n; i++)
             {
                 TreeNode temp = q.poll();
                 x += temp.val;
                 if(temp.left != null) q.add(temp.left); 
                 if(temp.right != null) q.add(temp.right);
-                n--;
             }
-            arr.add(x/l);
+            arr.add(x/n);
         }
         return arr;
     }
