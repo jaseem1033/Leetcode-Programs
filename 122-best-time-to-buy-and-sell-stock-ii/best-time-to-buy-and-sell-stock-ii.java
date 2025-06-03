@@ -7,7 +7,7 @@ class Solution {
         for(int i : prices) {
             minV = Math.min(minV,i);
             profit = Math.max(profit,i - minV);
-            if(i - minV > 0) {
+            if(profit > 0) {
                 tProfit += profit;
                 profit = 0;
                 minV = i;
