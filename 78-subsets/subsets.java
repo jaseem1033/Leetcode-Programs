@@ -3,21 +3,17 @@ class Solution {
     public List<List<Integer>> subsets(int[] nums) {
         result = new ArrayList<>();
         int index = 0;
-        cal(index,nums,new ArrayList<>());
+        cal(index, new ArrayList<>(),nums);
         return result;
     }
-    public void cal(int index, int[]nums, List<Integer> current) {
+    public void cal(int index,List<Integer> subset, int[] nums) {
         if(index == nums.length) {
-            result.add(new ArrayList<>(current));
+            result.add(new ArrayList(subset));
             return;
         }
-
-        cal(index+1,nums,current);
-
-        current.add(nums[index]);
-        cal(index+1,nums,current);
-        current.remove(current.size()-1);
-        
+        subset.add(nums[index]);
+        cal(index+1, subset,nums);
+        subset.remove(subset.size()-1);
+        cal(index+1, subset,nums);
     }
-
 }
