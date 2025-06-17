@@ -9,10 +9,8 @@ class Solution {
         if(target == 0) {
             result.add(new ArrayList<>(current));
         }
-        HashSet<Integer> set = new HashSet<>();
         for(int i = index; i < candidates.length; i++) {
-            if(set.contains(candidates[i])) continue;
-            set.add(candidates[i]);
+            if(i > index && candidates[i] == candidates[i-1]) continue;
             if(candidates[i] <= target) {
                 current.add(candidates[i]);
                 backTrack(i+1, target - candidates[i], current, candidates);
