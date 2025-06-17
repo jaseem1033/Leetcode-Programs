@@ -11,6 +11,7 @@ class Solution {
         }
         for(int i = index; i < candidates.length; i++) {
             if(i > index && candidates[i] == candidates[i-1]) continue;
+            if(candidates[i] > target) break;
             if(candidates[i] <= target) {
                 current.add(candidates[i]);
                 backTrack(i+1, target - candidates[i], current, candidates);
