@@ -4,16 +4,9 @@ class Solution {
         int i = 0, j = 0, max = 0, n = nums.length;
 
         for(j = 0; j < n; j++) {
-            int p = nums[j];
-            map.put(p, map.getOrDefault(p, 0) + 1);
-
-                while(map.get(p) > k) {
-
-                    int left = nums[i];
-                    map.put(left, map.get(left)- 1);
-                    if(map.get(left) == 0) 
-                        map.remove(left);
-                    i++;
+            map.put(nums[j], map.getOrDefault(nums[j], 0) + 1);
+                while(map.get(nums[j]) > k) {
+                    map.put(nums[i], map.get(nums[i++])- 1);
                 }
             max = Math.max(max, j - i + 1);
         }
