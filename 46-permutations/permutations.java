@@ -1,8 +1,7 @@
 class Solution {
-    List<List<Integer>> result;
+    List<List<Integer>> result = new ArrayList<>();;
 
     public List<List<Integer>> permute(int[] nums) {
-        result = new ArrayList<>();
         Integer[] arr = new Integer[nums.length];
 
         for(int i = 0; i < nums.length; i++)
