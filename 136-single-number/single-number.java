@@ -1,13 +1,10 @@
 class Solution {
     public int singleNumber(int[] nums) {
-        HashSet<Integer> set = new HashSet<>();
-        for(int i : nums) {
-            if(set.contains(i)) set.remove(i);
-            else set.add(i);
+        int x = nums[0];
+        for(int i = 1; i < nums.length; i++) {
+            x = x ^ nums[i];
         }
-        for(int i : set) {
-            return i;
-        }
-        return -1;
+
+        return x; 
     }
 }
