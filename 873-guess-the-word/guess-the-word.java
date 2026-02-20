@@ -9,7 +9,7 @@ class Solution {
     public void findSecretWord(String[] words, Master master) {
         List<String> list = new ArrayList<>(Arrays.asList(words));
 
-        while(true) {
+        while(!list.isEmpty()) {
 
                 String word = list.get(new Random().nextInt(list.size()));
 
