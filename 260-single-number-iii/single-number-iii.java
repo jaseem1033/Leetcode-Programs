@@ -10,7 +10,7 @@ class Solution {
             if((xorBit & 1) == 1) {
                 break;
             } 
-            setBit = setBit << 1;
+            setBit <<= 1;
             xorBit >>= 1;
         }
         int res1 = 0, res2 = 0;
