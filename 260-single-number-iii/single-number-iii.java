@@ -11,7 +11,7 @@ class Solution {
                 break;
             } 
             setBit = setBit << 1;
-            xorBit = xorBit >> 1;
+            xorBit >>= 1;
         }
         int res1 = 0, res2 = 0;
 
